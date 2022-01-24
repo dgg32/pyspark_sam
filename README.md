@@ -5,7 +5,11 @@ This repo hosts my code for the article "Analyze Big Sequence Alignments with Py
 
 # Prerequisite
 
-Spark  
+1. Spark
+
+2. AWS CLI
+
+3. AWS Account
 
 # Run
 
