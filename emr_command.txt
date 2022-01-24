@@ -1,0 +1,23 @@
+aws emr create-cluster --name "Spark_step_pip" \
+    --release-label emr-6.5.0 \
+    --applications Name=Spark \
+    --log-uri s3://neo4j-datathon-kendra/logs/ \
+    --ec2-attributes KeyName=cloudformation \
+    --instance-type m5.xlarge \
+    --instance-count 3 \
+    --bootstrap-actions Path=s3://neo4j-datathon-kendra/emr_bootstrap.sh \
+    --use-default-roles --auto-terminate \
+    --steps "Type=Spark,Name=SparkProgram,ActionOnFailure=CONTINUE,Args=[--deploy-mode,cluster,--master,yarn,--py-files,s3://neo4j-datathon-kendra/helper_function.py,s3://neo4j-datathon-kendra/spark_3mer.py,s3://neo4j-datathon-kendra/test.sam,s3a://neo4j-datathon-kendra/sankey.json]" 
+
+
+
+
+aws emr create-cluster --name "Spark_step_pip" \
+    --release-label emr-6.5.0 \
+    --applications Name=Spark \
+    --log-uri s3://neo4j-datathon-kendra/logs/ \
+    --instance-type m5.xlarge \
+    --instance-count 3 \
+    --bootstrap-actions Path=s3://neo4j-datathon-kendra/emr_bootstrap.sh \
+    --use-default-roles --auto-terminate \
+    --steps "Type=Spark,Name=SparkProgram,ActionOnFailure=CONTINUE,Args=[--deploy-mode,cluster,--master,yarn,--py-files,s3://neo4j-datathon-kendra/helper_function.py,s3://neo4j-datathon-kendra/spark_3mer.py,s3://neo4j-datathon-kendra/test.sam,neo4j-datathon-kendra,sankey.json]" 
