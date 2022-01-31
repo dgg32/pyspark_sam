@@ -1,6 +1,6 @@
 # pyspark_sam
 
-This repo hosts my code for the article "Analyze Big Sequence Alignments with PySpark in AWS EMR".
+This repo hosts my code for the article "[Analyze Big Sequence Alignments with PySpark in AWS EMR](https://medium.com/p/a044acaa60af)".
 
 
 # Prerequisite
